@@ -198,6 +198,7 @@ keroppi = sprites.create(img`
 . . . . . f f f f f f f f f f f f f f f . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . 
 `, SpriteKind.Player)
+controller.moveSprite(keroppi)
 keroppi.setPosition(45, 25)
 keroppiBig = sprites.create(img`
 . . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -243,5 +244,29 @@ f f f f 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 f f f f
 . . . . . . . f f f f f f f f f f . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 `, SpriteKind.Player)
-sayHello()
-game.splash("Good bye")
+pause(5000)
+keroppiBig.destroy()
+pause(1000)
+keroppiBig = sprites.create(img`
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . . f f f f f . . . . . f f f f f . . . . . 
+. . . . f 1 1 1 1 1 f . . . f 1 1 1 1 1 f . . . . 
+. . . f 1 1 1 1 1 1 1 f . f 1 1 1 1 1 1 1 f . . . 
+. . f 1 1 1 1 1 1 f 1 1 f 1 1 f 1 1 1 1 1 1 f . . 
+. . f 1 1 1 1 1 f f f 1 f 1 f f f 1 1 1 1 1 f . . 
+. . f 1 1 1 1 1 f f f 1 f 1 f f f 1 1 1 1 1 f . . 
+. . f 1 1 1 1 1 1 f 1 1 f 1 1 f 1 1 1 1 1 1 f . . 
+. . . f 1 1 1 1 1 1 1 f 7 f 1 1 1 1 1 1 1 f . . . 
+. . f 7 f 1 1 1 1 1 f 7 7 7 f 1 1 1 1 1 f 7 f . . 
+. f 7 7 7 f f f f f 7 7 7 7 7 f f f f f 7 7 7 f . 
+. f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f . 
+. f 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 f . 
+. f 7 7 7 3 3 3 7 7 7 7 7 7 7 7 7 3 3 3 7 7 7 f . 
+. f 7 7 7 3 3 3 7 7 7 7 7 7 7 7 7 3 3 3 7 7 7 f . 
+. . f 7 7 3 3 3 7 7 7 7 7 7 7 7 7 3 3 3 7 7 f . . 
+. . f 7 7 7 7 7 7 f 7 7 7 7 7 f 7 7 7 7 7 7 f . . 
+. . . f 7 7 7 7 7 7 f 7 7 7 f 7 7 7 7 7 7 f . . . 
+. . . . f 7 7 7 7 7 7 f 7 f 7 7 7 7 7 7 f . . . . 
+. . . . . f f f f f f f f f f f f f f f . . . . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . 
+`, SpriteKind.Player)

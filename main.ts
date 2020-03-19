@@ -36,15 +36,21 @@ function greeting () {
 . . . . . . . . . . . . . . . . 
 `, SpriteKind.Player)
     mySprite2.setPosition(78, 74)
-    mySprite.say("This is ")
-    mySprite2.say("Keroppi")
+    mySprite.say("This is ", 2000)
+    mySprite2.say("Keroppi", 2000)
 }
 function sayHello () {
     keroppi.say("hello", 1000)
     pause(1000)
+    helloKitty.say("hello", 1000)
+    pause(1000)
+    keroppiBig.say("hello", 1000)
+    pause(1000)
 }
 let mySprite2: Sprite = null
 let mySprite: Sprite = null
+let helloKitty: Sprite = null
+let keroppiBig: Sprite = null
 let keroppi: Sprite = null
 scene.setBackgroundImage(img`
 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 
@@ -193,8 +199,7 @@ keroppi = sprites.create(img`
 . . . . . . . . . . . . . . . . . . . . . . . . . 
 `, SpriteKind.Player)
 keroppi.setPosition(45, 25)
-sayHello()
-let keroppiBig = sprites.create(img`
+keroppiBig = sprites.create(img`
 . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . f f f f f . . . . . f f f f f . . . . . 
 . . . . f 1 1 1 1 1 f . . . f 1 1 1 1 1 f . . . . 
@@ -218,7 +223,7 @@ let keroppiBig = sprites.create(img`
 . . . . . . . . . . . . . . . . . . . . . . . . . 
 `, SpriteKind.Player)
 keroppiBig.setPosition(105, 95)
-let helloKitty = sprites.create(img`
+helloKitty = sprites.create(img`
 . . . . . . . . . . . . . 2 2 . . . . . . . . . 
 . . . . f f f . . . . . 2 3 3 2 . f f f . . . . 
 . . . f 1 1 1 f f f f 2 3 3 3 3 2 1 1 1 f . . . 
@@ -238,3 +243,5 @@ f f f f 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 f f f f
 . . . . . . . f f f f f f f f f f . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . 
 `, SpriteKind.Player)
+sayHello()
+game.splash("Good bye")
